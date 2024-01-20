@@ -10,6 +10,11 @@ const DEFAULT_SETTINGS: MyPluginSettings = {
 	mySetting: 'default'
 }
 
+// util function based on the 'zip' function from Python
+const zip = (...rows: (string[] | TFile[])[]) => [...rows[0]].map((_,c) => rows.map(row => row[c]))
+
+
+
 export default class MyPlugin extends Plugin {
 	settings: MyPluginSettings;
 
