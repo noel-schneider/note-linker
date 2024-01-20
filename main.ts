@@ -1,4 +1,6 @@
-import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Setting } from 'obsidian';
+import {Notice, Plugin, TFile} from 'obsidian';
+import {SampleSettingTab} from "./settings";
+import {SampleModal} from "./modal";
 
 // Remember to rename these classes and interfaces!
 
@@ -29,7 +31,6 @@ export default class MyPlugin extends Plugin {
 		});
 		// Perform additional things with the ribbon
 		ribbonIconEl.addClass('my-plugin-ribbon-class');
-
 
 		// This adds a settings tab so the user can configure various aspects of the plugin
 		this.addSettingTab(new SampleSettingTab(this.app, this));
